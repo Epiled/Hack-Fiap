@@ -1,0 +1,41 @@
+:root {
+  font-size: 62.5%;
+
+  --cor-principal: #1654F1;
+  --cor-principal-esc: #042579;
+  --cor-principal-claro: #042579;
+  --cor-principal-0: #f7951700;
+  --cor-principal-23: #f795173b;
+  --cor-principal-75: #f79517bf;
+
+  --cor-fonte: #6C757D;
+
+  --cor-fundo-1: #FFF;
+  --cor-fundo-ipt: #E6E6E6;
+
+
+  --cor-titulo: #575757;
+  --cor-ipt: #1D1D1D;
+
+  --cor-escura: #000000;
+  --cor-sombra: #292d3275;
+  --cor-place: #333333d6;
+
+  --branco: #ffffff;
+
+  font-family: 'Kokoro', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
