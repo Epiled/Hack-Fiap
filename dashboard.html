@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Dashboard</title>
 
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/normalize.css">
@@ -47,9 +47,9 @@
   </main>
 
   <aside class="menu__barra menu__barra--alt" data-ong-barra>
-    <img class="barra__img barra__img--alt" src="" alt="">
-    <h2 class="barra__nome ">Nome</h2>
-    <span class="barra__categoria">Categoria</span>
+    <img class="barra__img barra__img--alt" src="" alt="" data-ong-img>
+    <h2 class="barra__nome" data-ong-nome>Nome</h2>
+    <span class="barra__categoria" data-ong-categoria>Categoria</span>
 
     <div class="barra__divisor barra__divisor--alt">
 
@@ -57,7 +57,7 @@
         <h3 class="barra__subtitulo">
           Descrição:
         </h3>
-        <p class="barra__txt">
+        <p class="barra__txt" data-ong-desc>
           Descrição: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa
         </p>
       </div>
@@ -66,7 +66,7 @@
         <h3 class="barra__subtitulo">
           Necessidades:
         </h3>
-        <p class="barra__txt">
+        <p class="barra__txt" data-ong-nesc>
           Descrição: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa
         </p>
         <p class="barra__txt">
@@ -76,7 +76,7 @@
 
     </div>
 
-    <a class="btn barra__btn" href="">
+    <a class="btn barra__btn" href="" data-ong-id-voluntario>
       Voluntaria-se
     </a>
   </aside>
