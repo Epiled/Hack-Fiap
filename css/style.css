@@ -15,3 +15,14 @@
     align-items: center;
     justify-content: center;
 }
+
+.principal {
+  background: #E1E1E1;
+  height: 100vh;
+  padding-top: 3rem;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}

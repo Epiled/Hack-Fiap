@@ -1,9 +1,9 @@
-.cadastro {
+.formulario {
   max-width: 33rem;
   width: 100%;
 }
 
-.cadastro__campos {
+.formulario__campos {
   background-color: var(--branco);
   border: .1rem solid var(--cor-principal-esc);
   display: flex;
@@ -13,7 +13,7 @@
   border-radius: .5rem;
 }
 
-.cadastro__ipt {
+.formulario__ipt {
   color: var(--cor-ipt);
   border-radius: .5rem;
   border: .1rem solid var(--cor-principal);
@@ -23,6 +23,10 @@
   padding: .5rem;
 }
 
-.cadastro__ipt::placeholder {
+.formulario__ipt--alt {
+  height: 15rem;
+}
+
+.formulario__ipt::placeholder {
   color:  var(--cor-ipt);
 }

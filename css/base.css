@@ -3,18 +3,11 @@
 
   --cor-principal: #1654F1;
   --cor-principal-esc: #042579;
-  --cor-principal-claro: #042579;
-  --cor-principal-0: #f7951700;
-  --cor-principal-23: #f795173b;
-  --cor-principal-75: #f79517bf;
+  --cor-principal-claro: #83A5FA;
 
   --cor-fonte: #6C757D;
 
-  --cor-fundo-1: #FFF;
   --cor-fundo-ipt: #E6E6E6;
-
-
-  --cor-titulo: #575757;
   --cor-ipt: #1D1D1D;
 
   --cor-escura: #000000;
@@ -38,4 +31,8 @@ html {
 img {
   width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
 }

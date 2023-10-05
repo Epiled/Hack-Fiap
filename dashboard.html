@@ -11,36 +11,79 @@
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/btn.css">
-  <link rel="stylesheet" href="./css/cadastro.css">
+  <link rel="stylesheet" href="./css/formulario.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/box.css">
 </head>
 
 <body>
-  <header>
-    <div>
-      <button>
+  
+  <header class="menu">
+    <div class="menu__topo">
+      <button class="menu__btn" data-menu>
         Menu
         <img src="" alt="">
       </button>
     </div>
 
-    <div>
-      <img src="" alt="">
-      <h2></h2>
-      <span></span>
+    <div class="menu__barra" data-menu-barra>
+      <img class="barra__img" src="" alt="">
+      <h2 class="barra__nome ">Nome</h2>
+      <span class="barra__categoria">Categoria</span>
 
       <nav>
-        <div>
-          <a href=""></a>
-          <a href=""></a>
+        <div class="barra__divisor">
+          <a class="barra__link" href="cadastro-ong.html">Cadastrar ONG</a>
+          <a class="barra__link" href="cadastrar-necessidade.html">Registrar necessidades</a>
         </div>
 
-        <a href=""></a>
+        <a class="barra__sair" href="index.html">Sair</a>
       </nav>
     </div>
   </header>
-  <main>
-   
+
+  <main class="principal" data-container-ongs>
+
   </main>
+
+  <aside class="menu__barra menu__barra--alt" data-ong-barra>
+    <img class="barra__img barra__img--alt" src="" alt="">
+    <h2 class="barra__nome ">Nome</h2>
+    <span class="barra__categoria">Categoria</span>
+
+    <div class="barra__divisor barra__divisor--alt">
+
+      <div class="barra__conteudo">
+        <h3 class="barra__subtitulo">
+          Descrição:
+        </h3>
+        <p class="barra__txt">
+          Descrição: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa
+        </p>
+      </div>
+
+      <div class="barra__conteudo">
+        <h3 class="barra__subtitulo">
+          Necessidades:
+        </h3>
+        <p class="barra__txt">
+          Descrição: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa
+        </p>
+        <p class="barra__txt">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa
+        </p>
+      </div>
+
+    </div>
+
+    <a class="btn barra__btn" href="">
+      Voluntaria-se
+    </a>
+  </aside>
+
+  <script src="./js/menuToggle.js"></script>
+  <script src="./js/boxToggle.js"></script>
+  <script src="./src/app/mostraCards.js" type="module"></script>
 </body>
 
 </html>
