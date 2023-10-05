@@ -5,6 +5,13 @@ async function listaONGs() {
   return conexaoConvertida;
 }
 
+async function listaServicoEspecifico(id) {
+  const conexao = await fetch(`http://localhost:3000/servicos/?id=${id}`);
+  const conexaoConvertida = await conexao.json();
+  console.table(conexaoConvertida);
+  return conexaoConvertida;
+}
+
 async function cadastrarNecessidade(descricao, necessidades, idONG) {
   const conexao = await fetch('http://localhost:3000/servicos', {
     method: "POST",
@@ -25,5 +32,6 @@ async function cadastrarNecessidade(descricao, necessidades, idONG) {
 
 export const conectaApi = {
   cadastrarNecessidade,
+  listaServicoEspecifico,
   listaONGs,
 }

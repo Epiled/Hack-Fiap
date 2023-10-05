@@ -2,72 +2,30 @@ import { conectaApi } from './conectaNecessidades.js';
 import { conectaApi as conectaONG } from "./conectaOng.js";
 
 const barra = document.querySelector('[data-ong-barra]');
-const ongNome = document.querySelector('[data-ong-nome]');
-const ongCategoria = document.querySelector('[data-ong-img]');
-const ongDesc = document.querySelector('[data-ong-categoria]');
-const ongNesc = document.querySelector('[data-ong-desc]');
-const ondIdVoluntario = document.querySelector('[data-ong-nesc]');
+const ongImg = barra.querySelector('[data-ong-img]');
+const ongNome = barra.querySelector('[data-ong-nome]');
+const ongCategoria = barra.querySelector('[data-ong-categoria]');
+const ongDesc = barra.querySelector('[data-ong-desc]');
+const ongNesc = barra.querySelector('[data-ong-nesc]');
+const ondIdVoluntario = barra.querySelector('[data-ong-id-voluntario]');
 
-
-async function populaBarra(id, nome, categoria, descricao, necessidades, logo, idONG) {
+async function populaBarra(id, idONG) {
   const ong = await conectaONG.listaEspecificaONG(idONG);
-  const card = document.createElement('div');
-  card.className = 'box';
-  card.dataset.categoria = categoria;
-  card.dataset.card = '';
-  card.innerHTML = `
-    <div class="box__moldura">
-      <img class="box__img" src="${ong[0].logo}" alt="">
-    </div>
-    <div class="box__conteudo">
-      <h3 class="box__titulo">
-        ${ong[0].nomeONG}
-      </h3>
-      <p class="box__txt">
-        ${descricao}
-      </p>
-      <span class="box__categoria">
-        ${ong[0].tipo}
-      </span>
-    </div>
+  const idServico = await conectaApi.listaServicoEspecifico(id);
 
-    
-  `
+  // console.log(idONG)
+  console.log(ong)
+  console.log(idServico[0])
 
-  card.addEventListener('click', () => {
-    document.documentElement.classList.toggle('barra--ativa');
-    ongBarra.classList.toggle('menu__barra--alt--ativo');
-  });
+  ongImg.src = ong[0].logo;
+  ongNome.textContent = ong[0].nomeONG;
+  ongCategoria.textContent = ong[0].tipo;
+  ongDesc.textContent = idServico[0].descricao;
+  ongNesc.textContent = idServico[0].necessidades;
+  ondIdVoluntario.dataset.idOng = ong[0].ongId;
 
-  return card;
 }
 
-async function listaCards() {
-  try {
-    const listaApi = await conectaApi.listaONGs();
-    listaApi.forEach(async (element) => {
-      barra.appendChild(await criaCard(
-        element.id,
-        element.nome,
-        element.categoria,
-        element.descricao,
-        element.necessidades,
-        element.logo,
-        element.idONG
-      ))
-    });
-
-    return listaApi;
-  } catch (e) {
-    barra.innerHTML = `
-      <h2 class="mensagem__titulo">
-        Não foi possível carregar os vídeos
-      </h2>
-    `
-  }
-}
-
-const contaLogada = JSON.parse(localStorage.getItem("userLogado"));
-listaCards(contaLogada.idGastos)
-
-export default listaCards;
+export const conectaBarra = {
+  populaBarra
+};

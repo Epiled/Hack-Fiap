@@ -1,5 +1,6 @@
 import { conectaApi } from './conectaNecessidades.js';
 import { conectaApi as conectaONG } from "./conectaOng.js";
+import { conectaBarra } from "./mostrarBarra.js";
 
 const lista = document.querySelector('[data-container-ongs]');
 
@@ -29,6 +30,7 @@ async function criaCard(id, nome, categoria, descricao, necessidades, logo, idON
   card.addEventListener('click', () => {
     document.documentElement.classList.toggle('barra--ativa');
     ongBarra.classList.toggle('menu__barra--alt--ativo');
+    conectaBarra.populaBarra(id, idONG);
   });
 
   return card;
